@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainJS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body>
+    <!--------------------------------------------------- App1  -------------------------------------------------->
+    <hr style="margin-top: 10px;">
+    <h1 style="text-align: center;">App 1</h1>
+    <hr>
+    <section class="sec1">
+
+        <!-- product 1 -->
+        <div class="parent">
+            <div class="content-front">
+                <div class="content-front-img"> <img src="images/1.1.jpg" width="100%" alt=""></div>
+                <p class="product-title">Bomber Zipped Jacket With Removable Hood - Black</p>
+                <button id="goToBack" class="btn-front">show info</button>
+            </div>
+            <div class="content-back">
+                <div class="imgItems">
+                    <div class="groupImgShow">
+                        <img src="images/1.1.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/1.2.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/1.3.jpg" width="100%" id="imgShow" alt="">
+                    </div>
+                    <div class="groupImgIcon">
+                        <img src="images/1.1.jpg" id="imgBtn1" alt="">
+                        <img src="images/1.2.jpg" id="imgBtn2" alt="">
+                        <img src="images/1.3.jpg" id="imgBtn3" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <b>
+                        <p style="text-align: center;">Bomber Zipped Jacket - Black</p>
+                    </b>
+                    <p>Size : XL</p>
+                    <span>EGP : 1,200.00</span>
+                    <del>
+                        <span style="color: gray; font-size: 14;">EGP : 1,350.00</span>
+                    </del>
+                    <span class="product-discount">-11.1%</span>
+                    <h6 style="color: #4f651f;">Free delivery (you are saving EGP 10.83) to 6th of October</h6>
+                    <pre class="icons">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="color:gray ;"></i></span>
+                        <span class="heart-icon" id="heartBtn"><i class="fas fa-heart"></i></span>
+                    </pre>
+                </div>
+                <button id="addToCart" productName="Bomber Zipped Jacket" price="1200" class="btnAddToCart">Add To Cart
+                    <span id="cartIcon"><i class="fas fa-cart-plus"></i></span> </button>
+                <button id="goToFront" class="btnBack">No Thanks</button>
+            </div>
+        </div>
+        <!-- product 2 -->
+        <div class="parent parent">
+            <div class="content-front content-front">
+                <div class="content-front-img"> <img src="images/2.1.jpg" width="100%" alt=""></div>
+                <p class="product-title">Shield High-Neck Full Leather Shield Safety Boots-Black</p>
+                <button id="goToBack" class="btn-front">show info</button>
+            </div>
+            <div class="content-back">
+                <div class="imgItems">
+                    <div class="groupImgShow">
+                        <img src="images/2.1.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/2.2.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/2.3.jpg" width="100%" id="imgShow" alt="">
+                    </div>
+                    <div class="groupImgIcon">
+                        <img src="images/2.1.jpg" id="imgBtn1" alt="">
+                        <img src="images/2.2.jpg" id="imgBtn2" alt="">
+                        <img src="images/2.3.jpg" id="imgBtn3" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <b>
+                        <p style="text-align: center;">Safety Ankle Boots - Black</p>
+                    </b>
+
+                    <p>Size : 42</p>
+                    <span>EGP 549.00</span>
+                    <del>
+                        <span style="color: gray; font-size: 14;">EGP 600.00</span>
+                    </del>
+                    <span class="product-discount">-8.5%</span>
+                    <h6 style="color: #4f651f;">Free delivery (you are saving EGP 10.83) to 6th of October</h6>
+                    <pre class="icons">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="color:gray ;"></i></span>
+                        <span class="heart-icon" id="heartBtn"><i class="fas fa-heart"></i></span>
+                    </pre>
+                </div>
+                <button id="addToCart" price="549" productName="Safety Ankle Boots" class="btnAddToCart">Add To Cart
+                    <span id="cartIcon"><i class="fas fa-cart-plus"></i></span> </button>
+                <button id="goToFront" class="btnBack">No Thanks</button>
+            </div>
+        </div>
+        <!-- product 3 -->
+        <div class="parent parent">
+            <div class="content-front content-front">
+                <div class="content-front-img"> <img src="images/3.1.jpg" width="100%" alt=""></div>
+                <p class="product-title">American Eagle Training Jogger - Black</p>
+                <button id="goToBack" class="btn-front">show info</button>
+            </div>
+            <div class="content-back">
+                <div class="imgItems">
+                    <div class="groupImgShow">
+                        <img src="images/3.1.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/3.2.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/3.3.jpg" width="100%" id="imgShow" alt="">
+                    </div>
+                    <div class="groupImgIcon">
+                        <img src="images/3.1.jpg" id="imgBtn1" alt="">
+                        <img src="images/3.2.jpg" id="imgBtn2" alt="">
+                        <img src="images/3.3.jpg" id="imgBtn3" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <b>
+                        <p style="text-align: center;">American Eagle Training Jogger - Black</p>
+                    </b>
+
+                    <p>Size : XS</p>
+                    <span>EGP 700.00</span>
+                    <del>
+                        <span style="color: gray; font-size: 14;">EGP 1,000.00</span>
+                    </del>
+                    <span class="product-discount">-30%</span>
+                    <h6 style="color: #4f651f;">Free delivery (you are saving EGP 10.83) to 6th of October</h6>
+                    <pre class="icons">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="color:gray ;"></i></span>
+                        <span class="heart-icon" id="heartBtn"><i class="fas fa-heart"></i></span>
+                    </pre>
+                </div>
+                <button id="addToCart" price="700" class="btnAddToCart" productName="American Eagle Training Jogger">Add
+                    To Cart <span id="cartIcon"><i class="fas fa-cart-plus"></i></span> </button>
+                <button id="goToFront" class="btnBack">No Thanks</button>
+            </div>
+        </div>
+    </section>
+    <div class="showProuductsPrice">
+        <p class="products-choosed"></p>
+        <button class="addToCartBtn" style="display: none;">Show Price</button>
+        <p class="numbersOfProducts"></p>
+        <p class="totalPrice"></p>
+    </div>
+    <!--------------------------------------------------- App2  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 2</h1>
+    <hr>
+    <section class="sec-2">
+        <div class="app2-content">
+            <p style="text-align: center;">Try to change the number</p><br>
+            <button class="btnToDecreaseTen">-10</button>
+            <button class="btnToDecrease">-</button>
+            <input class="numInp" type="number" min="0" max="100" value="0">
+            <button class="btnToIncrease">+</button>
+            <button class="btnToIncreaseTen">+10</button>
+            <button class="btnToReset">Reset</button>
+
+            <span style="font-size: 13px; color: rgb(11, 36, 119); margin-left: 150px;">
+                Numbers from 0:100 are <mark>green</mark> color ,Other are <mark>red</mark> color
+            </span>
+
+            <br><br><br><br>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr><br><br><br>
+
+            <!-- <span>Arabic:</span><br> -->
+            <button class="btnToDecreaseByArrow"><i class="fas fa-angle-left"></i></button>
+            <span style="line-height: 20px;">0%</span>
+            <input class="inpRange" type="range" min="0" max="100" value="50">
+            <span>100%</span>
+            <button class="btnToIncreaseByArrow"><i class="fas fa-angle-right"></i></button>
+            <span class="percentOfRange"></span><br><br>
+            <button class="btnToResetRange">Reset</button>
+            <span style="font-size: 13px; color: rgb(11, 36, 119); margin-left: 350px;">
+                Numbers from 0:35 are <mark>red</mark> , Numbers from 35:65 are <mark>black</mark> and Numbers from
+                65:100 are <mark>green</mark> color
+            </span>
+            <br><br>
+        </div>
+    </section>
+    <!--------------------------------------------------- App3 -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 3</h1>
+    <hr>
+    <section class="sec-3">
+        <div class="sec3_content">
+            <img class="imgFriend" src="images/77oda.jpeg" width="100%" height="100%" alt="">
+            <span class="friendName">Mahmoud Elsebaey</span>
+            <span class="addUserIcon"><i class="fas fa-user-plus"></i></span>
+            <button class="cancelAddUser">Cancel</button>
+        </div>
+        <div class="sec3_content">
+            <img class="imgFriend" src="images/77oda.jpeg" width="100%" height="100%" alt="">
+            <span class="friendName">Mahmoud Elsebaey</span>
+            <span class="addUserIcon"><i class="fas fa-user-plus"></i></span>
+            <button class="cancelAddUser">Cancel</button>
+        </div>
+        <div class="sec3_content">
+            <img class="imgFriend" src="images/77oda.jpeg" width="100%" height="100%" alt="">
+            <span class="friendName">Mahmoud Elsebaey</span>
+            <span class="addUserIcon"><i class="fas fa-user-plus"></i></span>
+            <button class="cancelAddUser">Cancel</button>
+        </div>
+    </section>
+    <!--------------------------------------------------- App4  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 4</h1>
+    <hr>
+    <section class="sec-4">
+        <div class="sec4-content">
+            <u>
+                <p>Try Click</p>
+            </u>
+            <div class="menuBtn">
+                <span id="sp1"></span>
+                <span id="sp2"></span>
+                <span id="sp3"></span>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App5  -------------------------------------------------->
+    <!-- OZ -->
+    <hr>
+    <h1 style="text-align: center;">App 5</h1>
+    <hr>
+    <section class="sec-5">
+        <div class="sec5-content">
+            <textarea id="textareaContent" cols="40" rows="5" placeholder="Enter your Msg"></textarea>
+            <span id="countCharaters">100</span>
+            
+        </div>
+    </section>
+
+ <!--------------------------------------------------- App6  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 6</h1>
+    <hr>
+    <section class="sec-6">
+     <div class="sec6-content"> 
+        <label>Enter your pass </label>
+        <input type="password" class="passInp" id="passInp">
+        <button id="passBtn">show password</button>
+        <br><br><br>
+        <label>Enter your pass </label>
+        <input type="password" class="passInp" id="passInp2" >
+        <button class = "iconPassBtn"><i class="fas fa-eye-slash"></i></button>
+     </div>
+    </section>
+     <!--------------------------------------------------- App7  -------------------------------------------------->
+     <hr>
+     <h1 style="text-align: center;">App 7</h1>
+     <hr>
+     <section>
+       <p>soon</p>
+     </section>
+ 
+      <!--------------------------------------------------- App8  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 8</h1>
+    <hr>
+    <section>
+      <p>soon</p>
+    </section>
+
+     <!--------------------------------------------------- App9  -------------------------------------------------->
+     <hr>
+     <h1 style="text-align: center;">App 9</h1>
+     <hr>
+     <section>
+       <p>soon</p>
+     </section>
+ 
+
+
+
+
+
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    perspective: 600px;
+}
+
+/* --------------------------------------------------------------------------------- */
+.sec1 {
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.parent {
+    width: 300px;
+    height: 400px;
+    transition: .5s;
+    position: relative;
+    transform-style: preserve-3d;
+    /* backface-visibility: hidden; */
+    /*moz*/
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.parent .content-front,
+.parent .content-back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.parent .content-back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    box-shadow: 1px 1px 1px 1px #f68b1e, -1px -1px 1px 1px #f68b1e;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.parent .content-front:hover {
+    /* box-shadow: 1px 1px 1px #f68b1e ,  -1px -1px 1px #f68b1e; */
+    transform: scale(1.01);
+}
+
+.parent .content-front-img {
+    width: 100%;
+}
+
+.parent .product-title {
+    font-size: 17px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #f68b1e;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+.parent .btn-front {
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+    text-transform: capitalize;
+    background-color: #fff;
+    color: #f68b1e;
+    font-size: 20px;
+    border: 1px solid #f68b1e;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 7px 0px;
+    visibility: hidden;
+
+}
+
+.parent .btn-front:hover {
+    background-color: #f68b1e;
+    color: #fff;
+
+}
+
+.content-front:hover>.btn-front {
+    visibility: visible;
+}
+
+.parent:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 1px 1px #f68b1e, -1px -1px 1px 1px #f68b1e;
+
+}
+
+.sec2 {
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgItems {
+    width: 100%;
+    height: 55%;
+    display: flex;
+}
+
+.groupImgShow {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    /* border: 1px solid black; */
+
+}
+
+.groupImgShow img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+}
+
+.groupImgIcon {
+    width: 20%;
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.groupImgIcon img {
+    width: 50px;
+
+}
+
+.groupImgIcon img:hover {
+    border: 1px solid black;
+}
+
+.product-info {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.product-discount {
+    background-color: #ff80004e;
+    color: #f68b1e;
+    float: right;
+    margin-right: 22px;
+    padding: 0px 4px;
+}
+
+.product-info .icons {
+    width: 90%;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.product-info .stars {
+    color: #f68b1e;
+}
+
+.product-info .heart-icon {
+    color: #a39292;
+    background-color: rgba(160, 160, 167, 0.316);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+
+}
+
+.btnBack, .btnAddToCart, .addToCartBtn {
+    padding: 7px 0px;
+    border: 1px solid #f68b1e;
+    color: #f68b1e;
+    background-color: #fff;
+    cursor: pointer;
+    visibility: hidden;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.btnBack {
+    float: left;
+    width: 35%;
+}
+
+.btnAddToCart {
+    width: 63%;
+    float: right;
+}
+
+.btnBack:hover, .btnAddToCart:hover {
+    background-color: #f68b1e;
+    border: none;
+    color: #fff;
+}
+
+.content-back:hover>.btnBack,
+.content-back:hover>.btnAddToCart {
+    visibility: visible;
+}
+
+.showProuductsPrice {
+    width: 60%;
+    min-height: 100px;
+    margin: 0 auto 50px;
+    display: block;
+    color: #ab5805;
+    line-height: 2;
+}
+
+.addToCartBtn {
+    visibility: visible;
+    padding: 5px 10px;
+    background-color: #f68b1e;
+    color: #fff;
+
+}
+
+/***************************************************************** app2  ****************************/
+
+.sec-2 {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.sec-2 .app2-content {
+    margin: 50px auto;
+    display: block;
+
+}
+
+.sec-2 .btnToDecrease,
+.sec-2 .btnToIncrease,
+.sec-2 .btnToIncreaseTen,
+.sec-2 .btnToReset,
+.sec-2 .btnToDecreaseTen {
+    width: fit-content;
+    height: 30px;
+    cursor: pointer !important;
+    padding: 0px 10px;
+}
+
+.sec-2 .btnToReset {
+    margin-left: 50px;
+}
+
+.sec-2 .numInp {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.numInp:in-range {
+    color: green;
+}
+
+.numInp:out-of-range {
+    color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/***************** App2 p2 ****************/
+
+.sec-2 .btnToDecreaseByArrow,
+.sec-2 .btnToIncreaseByArrow {
+    width: 30px;
+    font-size: 20px;
+    color: rgb(103, 192, 222);
+    cursor: pointer;
+}
+
+.sec-2 .inpRange {
+    width: 200px;
+}
+
+.sec-2 .percentOfRange {
+    margin-left: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.sec-2 .btnToResetRange {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/***************************************************************** app3  ****************************/
+
+.sec-3 {
+    width: 80%;
+    margin: 50px auto;
+    /* border: 1px solid red; */
+}
+
+.sec3_content {
+    display: flex;
+    margin-top: 15px;
+}
+
+.sec-3 .imgFriend {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.sec-3 .friendName {
+    line-height: 50px;
+    padding-left: 10px;
+}
+
+.sec-3 .addUserIcon {
+    line-height: 50px;
+    font-size: 25px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.sec-3 .cancelAddUser {
+    width: 80px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 50px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+
+/***************************************************************** app4  ****************************/
+
+.sec-4 {
+    width: 80%;
+    margin: 50px auto;
+    /* border: 1px solid red; */
+}
+
+.sec-4 .sec4-content {
+    margin: 50px 250px;
+}
+
+.sec-4 .menuBtn {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #f68b1e;
+    cursor: pointer;
+    transition: .5s;
+    margin: auto;
+}
+
+.sec-4 .menuBtn span {
+    width: 85%;
+    height: 8px;
+    display: block;
+    margin: 19px auto 0px;
+    background-color: #f68b1e;
+    transition: .5s;
+}
+
+/***************************************************************** app5  ****************************/
+.sec-5 {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+.sec-5 .sec5-content {
+    margin: 50px 250px;
+    position: relative;
+}
+
+.sec-5 .sec5-content #textareaContent {
+    padding: 10px 50px;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+
+.sec-5 .sec5-content span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin-left: -35px;
+    margin-top: -20px;
+    font-weight: bolder;
+    background-color: rgb(209, 190, 190);
+
+}
+
+/***************************************************************** app6  ****************************/
+
+.sec-6 {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.sec-6 .sec6-content {
+    width: 50%;
+    margin: auto;
+}
+
+.passInp {
+    width: 200px;
+    height: 30px;
+}
+
+#passBtn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.iconPassBtn {
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
