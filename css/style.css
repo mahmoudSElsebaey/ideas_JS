@@ -455,3 +455,31 @@ input[type=number] {
     background-color: transparent;
     border: none;
 }
+
+/***************************************************************** app7  ****************************/
+
+.sec-7 {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.sec-7 .sec7-content {
+    width: 80%;
+    height: auto;
+    margin: 100px auto;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.sec-7 .sec7-content i {
+    color: #d6d2d27f;
+    font-size: 80px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: .2s;
+}
+
+/* .sec-7 .sec7-content i:hover {
+    color: #f68b1e;
+} */

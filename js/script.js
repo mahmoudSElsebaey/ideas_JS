@@ -287,7 +287,6 @@ passBtn.onclick = function () {
     }
 }
 
-
 var passInp2 = document.querySelector("#passInp2");
 var iconPassBtn = document.querySelector(".iconPassBtn");
 
@@ -299,4 +298,43 @@ iconPassBtn.onclick = function () {
         passInp2.setAttribute("type", "password")
         this.innerHTML = '<i class="fas fa-eye-slash"></i>'
     }
+}
+
+////***************************************************** App7 **********************************************/
+
+var starsIcons = document.querySelectorAll("#starsIcons i")
+starsIcons[0].onclick = function () {
+    starsIcons[0].style.color = "#f68b1e"
+    starsIcons[1].style.color = null
+    starsIcons[2].style.color = null
+    starsIcons[3].style.color = null
+    starsIcons[4].style.color = null
+}
+starsIcons[1].onclick = function () {
+    starsIcons[0].style.color = "#f68b1e"
+    starsIcons[1].style.color = "#f68b1e"
+    starsIcons[2].style.color = null
+    starsIcons[3].style.color = null
+    starsIcons[4].style.color = null
+}
+starsIcons[2].onclick = function () {
+    starsIcons[0].style.color = "#f68b1e"
+    starsIcons[1].style.color = "#f68b1e"
+    starsIcons[2].style.color = "#f68b1e"
+    starsIcons[3].style.color = null
+    starsIcons[4].style.color = null
+}
+starsIcons[3].onclick = function () {
+    starsIcons[0].style.color = "#f68b1e"
+    starsIcons[1].style.color = "#f68b1e"
+    starsIcons[2].style.color = "#f68b1e"
+    starsIcons[3].style.color = "#f68b1e"
+    starsIcons[4].style.color = null
+}
+starsIcons[4].onclick = function () {
+    starsIcons[0].style.color = "#f68b1e"
+    starsIcons[1].style.color = "#f68b1e"
+    starsIcons[2].style.color = "#f68b1e"
+    starsIcons[3].style.color = "#f68b1e"
+    starsIcons[4].style.color = "#f68b1e"
 }
