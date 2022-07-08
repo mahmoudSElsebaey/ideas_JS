@@ -338,3 +338,59 @@ starsIcons[4].onclick = function () {
     starsIcons[3].style.color = "#f68b1e"
     starsIcons[4].style.color = "#f68b1e"
 }
+
+////***************************************************** App8 p3 **********************************************/
+var imgIconsBtn = document.querySelectorAll("#imgIcons img")
+    , imgShow = document.querySelectorAll("#imgShow img");
+imgIconsBtn.forEach(function (imgBtnItem, i) {
+    imgShow[0].style.visibility = "visible"
+    function changeImgShow(indexImg) {
+        for (var x = 0; x <= imgShow.length; x++) {
+            if (x == indexImg) {
+                imgShow[x].style.visibility = "visible"
+                imgShow[x].style.animation = "imgAnimate 1.5s"
+            } else {
+                imgShow[x].style.visibility = null
+                imgShow[x].style.animation = null
+            }
+        }
+    }
+    function switchImg() {
+        if (i == 0) { changeImgShow(i) }
+        else if (i == 1) { changeImgShow(i) }
+        else if (i == 2) { changeImgShow(i) }
+        else if (i == 3) { changeImgShow(i) }
+        else {
+            imgShow[4].style.visibility = "visible"
+            imgShow[4].style.animation = "imgAnimate 1.5s"
+        }
+    }
+    imgBtnItem.onclick = switchImg
+})
+
+////***************************************************** App9 **********************************************/
+var timeNow = document.querySelector(".timeNow")
+var dateNow = document.querySelector(".dateNow")
+
+function changeTime() {
+    const timeToday = new Date();
+    var sec = timeToday.getSeconds();
+    var min = timeToday.getMinutes();
+    var hour = timeToday.getHours();
+    var day = timeToday.getUTCDate()
+    var month = timeToday.getMonth() + 1
+    var year = timeToday.getUTCFullYear()
+    sec = checkTime(sec)
+    min = checkTime(min)
+    timeNow.textContent = sec + " : " + min + " : " + hour
+    dateNow.textContent = day + " / " + month + " / " + year
+    setTimeout(changeTime, 1000);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i
+    };
+    return i;
+}
+
+window.onload(changeTime())

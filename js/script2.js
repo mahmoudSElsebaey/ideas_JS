@@ -577,5 +577,118 @@ menuBtn.onclick = afterClickMenuBtn
 ////***************************************************** App4 ********************************/
 
 
+////***************************************************** App8  p1**********************************************/
+var imgIconsBtn = document.querySelectorAll("#imgIcons img")
+var imgShow = document.querySelectorAll("#imgShow img")
+
+imgIconsBtn.forEach(function (imgBtnItem, i) {
+    imgShow[0].style.visibility = "visible"
+    function switchImg() {
+        if (i == 0) {
+            imgShow[0].style.visibility = "visible"
+            imgShow[1].style.visibility = null
+            imgShow[2].style.visibility = null
+            imgShow[3].style.visibility = null
+            imgShow[4].style.visibility = null
+            imgShow[0].style.animation = "imgAnimate 1.5s"
+            imgShow[1].style.animation = null
+            imgShow[2].style.animation = null
+            imgShow[3].style.animation = null
+            imgShow[4].style.animation = null
+        } else if (i == 1) {
+            imgShow[0].style.visibility = null
+            imgShow[1].style.visibility = "visible"
+            imgShow[2].style.visibility = null
+            imgShow[3].style.visibility = null
+            imgShow[4].style.visibility = null
+            imgShow[0].style.animation = null
+            imgShow[1].style.animation = "imgAnimate 1.5s"
+            imgShow[2].style.animation = null
+            imgShow[3].style.animation = null
+            imgShow[4].style.animation = null
+        } else if (i == 2) {
+            imgShow[0].style.visibility = null
+            imgShow[1].style.visibility = null
+            imgShow[2].style.visibility = "visible"
+            imgShow[3].style.visibility = null
+            imgShow[4].style.visibility = null
+            imgShow[0].style.animation = null
+            imgShow[1].style.animation = null
+            imgShow[2].style.animation = "imgAnimate 1.5s"
+            imgShow[3].style.animation = null
+            imgShow[4].style.animation = null
+        } else if (i == 3) {
+            imgShow[0].style.visibility = null
+            imgShow[1].style.visibility = null
+            imgShow[2].style.visibility = null
+            imgShow[3].style.visibility = "visible"
+            imgShow[4].style.visibility = null
+            imgShow[0].style.animation = null
+            imgShow[1].style.animation = null
+            imgShow[2].style.animation = null
+            imgShow[3].style.animation = "imgAnimate 1.5s"
+            imgShow[4].style.animation = null
+        } else {
+            imgShow[4].style.visibility = "visible"
+            imgShow[4].style.animation = "imgAnimate 1.5s"
+        }
+    }
+    imgBtnItem.onclick = switchImg
+})
 
 
+////***************************************************** App8 p2**********************************************/
+var imgIconsBtn = document.querySelectorAll("#imgIcons img")
+var imgShow = document.querySelectorAll("#imgShow img")
+
+imgIconsBtn.forEach(function (imgBtnItem, i) {
+    imgShow[0].style.visibility = "visible"
+    
+    function switchImg() {
+        if (i == 0) {
+            for (var x = 0; x <= imgShow.length; x++) {
+                if (x == 0) {
+                    imgShow[x].style.visibility = "visible"
+                    imgShow[x].style.animation = "imgAnimate 1.5s"
+                } else {
+                    imgShow[x].style.visibility = null
+                    imgShow[x].style.animation = null
+                }
+            }
+        } else if (i == 1) {
+            for (var x = 0; x <= imgShow.length; x++) {
+                if (x == 1) {
+                    imgShow[x].style.visibility = "visible"
+                    imgShow[x].style.animation = "imgAnimate 1.5s"
+                } else {
+                    imgShow[x].style.visibility = null
+                    imgShow[x].style.animation = null
+                }
+            }
+        } else if (i == 2) {
+            for (var x = 0; x <= imgShow.length; x++) {
+                if (x == 2) {
+                    imgShow[x].style.visibility = "visible"
+                    imgShow[x].style.animation = "imgAnimate 1.5s"
+                } else {
+                    imgShow[x].style.visibility = null
+                    imgShow[x].style.animation = null
+                }
+            }
+        } else if (i == 3) {
+            for (var x = 0; x <= imgShow.length; x++) {
+                if (x == 3) {
+                    imgShow[x].style.visibility = "visible"
+                    imgShow[x].style.animation = "imgAnimate 1.5s"
+                } else {
+                    imgShow[x].style.visibility = null
+                    imgShow[x].style.animation = null
+                }
+            }
+        } else {
+            imgShow[4].style.visibility = "visible"
+            imgShow[4].style.animation = "imgAnimate 1.5s"
+        }
+    }
+    imgBtnItem.onclick = switchImg
+})
