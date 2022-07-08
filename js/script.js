@@ -391,6 +391,57 @@ function checkTime(i) {
         i = "0" + i
     };
     return i;
+
+}
+changeTime()
+// window.onload(changeTime())   /// problem , if i use it !!
+
+///***************************************************************** app10  ****************************/
+
+var btnS1 = document.querySelector("#btnSound_1")
+    , btnS2 = document.querySelector("#btnSound_2")
+    , btnAlert = document.querySelector("#btnAlert")
+    , btnClose = document.querySelector("#btnClose")
+    , btnError = document.querySelector("#btnError")
+    , soundButtonDown = new Audio("sounds/mixkit-click-melodic-tone-1129.wav");
+
+function btnSoundActive(x) {
+    x.style.marginTop = "10px"
+    x.style.boxShadow = " 0px 1px 2px #ab5805, 0px 4px 4px black";
 }
 
-window.onload(changeTime())
+function btnSoundCancelActive(z) {
+    z.style.marginTop = null
+    z.style.boxShadow = null;
+}
+/////click btn
+btnS1.onmousedown = function () {
+    btnSoundActive(this)
+    soundButtonDown.play()
+}
+btnS1.onmouseup = function () { btnSoundCancelActive(this) }
+/////dbclick btn
+btnS2.onmousedown = function () {
+    btnSoundActive(this)
+    new Audio("sounds/mixkit-fast-double-click-on-mouse-275.wav").play()
+}
+btnS2.onmouseup = function () { btnSoundCancelActive(this) }
+ /////Alert btn
+btnAlert.onmousedown = function () {
+    btnSoundActive(this)
+    new Audio("sounds/mixkit-select-click-1109.wav").play()
+                 //    alert("You shoud login first")
+}
+btnAlert.onmouseup = function () { btnSoundCancelActive(this) }
+ /////close btn
+btnClose.onmousedown = function () {
+    btnSoundActive(this)
+    new Audio("sounds/mixkit-mouse-click-close-1113.wav").play()
+}
+btnClose.onmouseup = function () { btnSoundCancelActive(this) }
+/////Error btn
+btnError.onmousedown = function () {
+    btnSoundActive(this)
+    new Audio("sounds/mixkit-click-error-1110.wav").play()
+}
+btnError.onmouseup = function () { btnSoundCancelActive(this) }

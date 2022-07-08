@@ -573,3 +573,37 @@ input[type=number] {
     margin-left: 50px;
     box-shadow: 2px 2px 5px 1px black;
 }
+
+/***************************************************************** app10  ****************************/
+.sec-10 {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.sec-10 .sec10-content {
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid red; */
+}
+
+.sec-10 .btnsWithSound {
+    /* border: 1px solid red; */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.sec-10 button {
+    width: fit-content;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 50px;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    background-color: #f68b1e;
+    box-shadow: 0px 5px 2px #ab5805, 0px 10px 4px black;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    transition: .3s;
+}
