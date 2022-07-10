@@ -403,7 +403,7 @@ var btnS1 = document.querySelector("#btnSound_1")
     , btnAlert = document.querySelector("#btnAlert")
     , btnClose = document.querySelector("#btnClose")
     , btnError = document.querySelector("#btnError")
-    , soundButtonDown = new Audio("sounds/mixkit-click-melodic-tone-1129.wav");
+    , soundButtonDown = new Audio("sounds/mixkit-fast-double-click-on-mouse-275.mp3");
 
 function btnSoundActive(x) {
     x.style.marginTop = "10px"
@@ -423,25 +423,25 @@ btnS1.onmouseup = function () { btnSoundCancelActive(this) }
 /////dbclick btn
 btnS2.onmousedown = function () {
     btnSoundActive(this)
-    new Audio("sounds/mixkit-fast-double-click-on-mouse-275.wav").play()
+    new Audio("sounds/mixkit-fast-double-click-on-mouse-275.mp3").play()
 }
 btnS2.onmouseup = function () { btnSoundCancelActive(this) }
  /////Alert btn
 btnAlert.onmousedown = function () {
     btnSoundActive(this)
-    new Audio("sounds/mixkit-select-click-1109.wav").play()
+    new Audio("sounds/mixkit-select-click-1109.mp3").play()
                  //    alert("You shoud login first")
 }
 btnAlert.onmouseup = function () { btnSoundCancelActive(this) }
  /////close btn
 btnClose.onmousedown = function () {
     btnSoundActive(this)
-    new Audio("sounds/mixkit-mouse-click-close-1113.wav").play()
+    new Audio("sounds/mixkit-mouse-click-close-1113.mp3").play()
 }
 btnClose.onmouseup = function () { btnSoundCancelActive(this) }
 /////Error btn
 btnError.onmousedown = function () {
     btnSoundActive(this)
-    new Audio("sounds/mixkit-click-error-1110.wav").play()
+    new Audio("sounds/mixkit-click-error-1110.mp3").play()
 }
 btnError.onmouseup = function () { btnSoundCancelActive(this) }
