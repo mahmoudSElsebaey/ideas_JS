@@ -607,3 +607,188 @@ input[type=number] {
     border-radius: 10px;
     transition: .3s;
 }
+
+/***************************************************************** app11  ****************************/
+.sec-11 {
+    width: 60%;
+    margin: 10px auto;
+}
+
+.sec-11 .sec11-content {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.sec-11 .mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.sec-11 .sec11-content .next,
+.sec-11 .sec11-content .prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    transform: translate(0, -50%);
+    text-align: center;
+    line-height: 50px;
+    transition: .8s;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.sec-11 .sec11-content .next {
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.sec-11 .sec11-content .next:hover,
+.sec-11 .sec11-content .prev:hover {
+    background-color: black;
+}
+
+.sec-11 .imgDots {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imgDots .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #a39292ab;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.imgDots .dot:hover, .active {
+    background-color: rgb(40, 39, 39);
+}
+
+/***************************************************************** app12  ****************************/
+.sec-12 {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.sec-12 .sec12-content {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid red;
+}
+/***************************************************************** app13  ****************************/
+.sec-13 {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.sec-13 .sec13-content {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.parent-box {
+    background-color: #a6a49a2e;
+    width: 350px;
+    height: 200px;
+    margin-right: 10px;
+    border: 1px solid #f1f1f1;
+}
+
+.box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+}
+
+.box-inner p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.box-inner ol {
+    margin-top: 10px;
+    line-height: 1.7;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.box-inner button {
+    padding: 7px 20px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: none;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.box-inner button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.box-front, .box-back {
+    position: absolute;
+    padding: 7px 25px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.box-back {
+    background-color: rgb(221, 211, 211);
+    transform: rotateX(180deg);
+}
+
+.box-back ol {
+    font-size: smaller;
+    color: gray;
+}
+
+.box-back .correct-solution {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(25, 186, 25);
+  
+}
+
+/***************************************************************** app14  ****************************/
+.sec-14 {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.sec-14 .sec14-content {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid red;
+}

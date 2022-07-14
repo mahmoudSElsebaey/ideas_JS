@@ -8,6 +8,7 @@
     <title>TrainingJS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
 
 </head>
 
@@ -178,14 +179,14 @@
             <!-- <span>Arabic:</span><br> -->
             <button class="btnToDecreaseByArrow"><i class="fas fa-angle-left"></i></button>
             <span style="line-height: 20px;">0%</span>
-            <input class="inpRange" type="range" min="0" max="100" value="50">
+            <input class="inpRange" type="range" min="0" max="100" value="50" disabled>
             <span>100%</span>
             <button class="btnToIncreaseByArrow"><i class="fas fa-angle-right"></i></button>
             <span class="percentOfRange"></span><br><br>
             <button class="btnToResetRange">Reset</button>
             <span style="font-size: 13px; color: rgb(11, 36, 119); margin-left: 350px;">
-                Numbers from 0:35 are <mark>red</mark> , Numbers from 35:65 are <mark>black</mark> and Numbers from
-                65:100 are <mark>green</mark> color
+                Numbers from 0:40 are <mark>red</mark> , Numbers from 40:60 are <mark>black</mark> and Numbers from
+                60:100 are <mark>green</mark> color
             </span>
             <br><br>
         </div>
@@ -312,9 +313,6 @@
             </div>
         </div>
     </section>
-
-
-
     <!--------------------------------------------------- App10  -------------------------------------------------->
     <hr>
     <h1 style="text-align: center;">App 10</h1>
@@ -328,11 +326,131 @@
                 <div class="btnS"> <button id="btnAlert">Alert</button></div>
                 <div class="btnS"> <button id="btnClose">Close</button></div>
                 <div class="btnS"> <button id="btnError">Error</button></div>
-
+                <div class="btnS"> <button id="btnAlarm">Alarm</button></div>
             </div>
         </div>
     </section>
+    <!--------------------------------------------------- App11  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 11</h1>
+    <hr>
+    <section class="sec-11">
+        <div class="sec11-content">
+            <div class="mySlides"><img src="images/n1.jpg" width="100%" height="100%"></div>
+            <div class="mySlides"><img src="images/n2.jpg" width="100%" height="100%"></div>
+            <div class="mySlides"><img src="images/n3.jpg" width="100%" height="100%"></div>
+            <div class="mySlides"><img src="images/n4.jpg" width="100%" height="100%"></div>
 
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="imgDots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!--------------------------------------------------- App12  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 12</h1>
+    <hr>
+    <section class="sec-12">
+        <div class="sec12-content">
+        </div>
+    </section>
+    <!--------------------------------------------------- App13  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 13</h1>
+    <hr>
+    <section class="sec-13">
+        <div class="sec13-content">
+            <!-- Q1 -->
+            <div class="parent-box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <p>Q<sub>1</sub>) CSS stands for</p>
+                        <ol>
+                            <li>Cascade style sheets</li>
+                            <li>Color and style sheets</li>
+                            <li>Cascading style sheets</li>
+                            <li>None of the above</li>
+                        </ol>
+                        <button id="showSolutionBtn">Show solution</button>
+                    </div>
+                    <div class="box-back">
+                        <p>Q<sub>1</sub>) CSS stands for</p>
+                        <ol>
+                            <li>Cascade style sheets</li>
+                            <li>Color and style sheets</li>
+                            <li class="correct-solution">Cascading style sheets</li>
+                            <li>None of the above</li>
+                        </ol>
+                        <button id="doneSolutionBtn">Done</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Q2 -->
+            <div class="parent-box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <p>Q<sub>2</sub>) it is a way for writing css</p>
+                        <ol>
+                            <li>internal stylesheet</li>
+                            <li>inline stylesheet</li>
+                            <li>external stylesheet</li>
+                            <li>all of mentioned</li>
+                        </ol>
+                        <button id="showSolutionBtn">Show solution</button>
+                    </div>
+                    <div class="box-back">
+                        <p>Q<sub>2</sub>) it is a way for writing css</p>
+                        <ol>
+                            <li>internal stylesheet</li>
+                            <li>inline stylesheet</li>
+                            <li>external stylesheet</li>
+                            <li class="correct-solution">all of mentioned</li>
+                        </ol>
+                        <button id="doneSolutionBtn">Done</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Q3 -->
+            <div class="parent-box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <p style="font-size: 17px;">Q<sub>3</sub>) The default animation-play-state</p>
+                        <ol>
+                            <li>running</li>
+                            <li>linear</li>
+                            <li>paused</li>
+                            <li>normal</li>
+                        </ol>
+                        <button id="showSolutionBtn">Show solution</button>
+                    </div>
+                    <div class="box-back">
+                        <p style="font-size: 17px;">Q<sub>3</sub>) The default animation-play-state</p>
+                        <ol>
+                            <li class="correct-solution">running</li>
+                            <li>linear</li>
+                            <li>paused</li>
+                            <li>normal</li>
+                        </ol>
+                        <button id="doneSolutionBtn">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App14  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 14</h1>
+    <hr>
+    <section class="sec-14">
+        <div class="sec14-content"></div>
+    </section>
 
     <script src="js/script.js"></script>
     <!-- <script src="js/script2.js"></script> -->

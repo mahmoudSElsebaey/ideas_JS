@@ -187,7 +187,7 @@ function increaseRange() {
     }
     percentOfRange.innerHTML = ""
     percentOfRange.innerHTML += inpRange.value + "%"
-    if (parseInt(percentOfRange.innerHTML) >= 65) {
+    if (parseInt(percentOfRange.innerHTML) >= 60) {
         percentOfRange.style.color = "green"
     } else {
         percentOfRange.style.color = "#000"
@@ -403,6 +403,7 @@ var btnS1 = document.querySelector("#btnSound_1")
     , btnAlert = document.querySelector("#btnAlert")
     , btnClose = document.querySelector("#btnClose")
     , btnError = document.querySelector("#btnError")
+    , btnAlarm = document.querySelector("#btnAlarm")
     , soundButtonDown = new Audio("sounds/mixkit-fast-double-click-on-mouse-275.mp3");
 
 function btnSoundActive(x) {
@@ -414,34 +415,86 @@ function btnSoundCancelActive(z) {
     z.style.marginTop = null
     z.style.boxShadow = null;
 }
-/////click btn
+/////click btn /////
 btnS1.onmousedown = function () {
     btnSoundActive(this)
     soundButtonDown.play()
 }
 btnS1.onmouseup = function () { btnSoundCancelActive(this) }
-/////dbclick btn
+/////dbclick btn /////
 btnS2.onmousedown = function () {
     btnSoundActive(this)
     new Audio("sounds/mixkit-fast-double-click-on-mouse-275.mp3").play()
 }
 btnS2.onmouseup = function () { btnSoundCancelActive(this) }
- /////Alert btn
+/////Alert btn /////
 btnAlert.onmousedown = function () {
     btnSoundActive(this)
     new Audio("sounds/mixkit-select-click-1109.mp3").play()
-                 //    alert("You shoud login first")
+    // alert("You shoud login first")         
 }
 btnAlert.onmouseup = function () { btnSoundCancelActive(this) }
- /////close btn
+/////close btn /////
 btnClose.onmousedown = function () {
     btnSoundActive(this)
     new Audio("sounds/mixkit-mouse-click-close-1113.mp3").play()
 }
 btnClose.onmouseup = function () { btnSoundCancelActive(this) }
-/////Error btn
+/////Error btn /////
 btnError.onmousedown = function () {
     btnSoundActive(this)
     new Audio("sounds/mixkit-click-error-1110.mp3").play()
 }
 btnError.onmouseup = function () { btnSoundCancelActive(this) }
+//////Alarm btn /////
+btnAlarm.onmousedown = function () {
+    btnSoundActive(this)
+    new Audio("sounds/mixkit-classic-alarm-995.mp3").play()
+}
+btnAlarm.onmouseup = function () { btnSoundCancelActive(this) }
+
+///******************************************************************** app11  ****************************/
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+///******************************************************************** app13  ****************************/
+var showSolutionBtn = document.querySelectorAll("#showSolutionBtn")
+    , doneSolutionBtn = document.querySelectorAll("#doneSolutionBtn")
+    , parentInner = document.querySelectorAll(".box-inner")
+
+
+showSolutionBtn.forEach(function (SSB ,i) {
+    SSB.onclick = function () {
+        parentInner[i].style.transform = "rotateX(180deg)"
+    }
+})
+
+doneSolutionBtn.forEach(function (DSB , i) {
+    DSB.onclick = function () {
+        parentInner[i].style.transform = "rotateX(360deg)"
+    }
+})
