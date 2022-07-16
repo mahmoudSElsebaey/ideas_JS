@@ -481,19 +481,50 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+///******************************************************************** app12  ****************************/
+let imgItemsBtn = document.querySelectorAll("#imgItems li")
+    , imgContainerBox = document.querySelectorAll("#imgContainer")
+    , BtnCloseImgs = document.querySelectorAll(".BtnCloseImgs")
+    , zIndx = 0
+imgItemsBtn.forEach(function (imgItem, i) {
+    imgContainerBox[0].style.visibility = "visible"     // active
+    imgContainerBox[0].style.display = "block"          //active
+    function closeImgBox() {
+        imgContainerBox[i].style.visibility = null
+        imgContainerBox[i].style.display = null
+        imgContainerBox[i].style.animation = null
+    }
+    function showImgBox() {
+        imgContainerBox[i].style.animation = "animateToDown 1s"
+        imgContainerBox[i].style.visibility = "visible"
+        imgContainerBox[i].style.display = "block"
+        imgContainerBox[i].style.zIndex = zIndx++
+        BtnCloseImgs[i].onclick = closeImgBox
+    }
+    if (i == 0) {
+        imgItem.onclick = showImgBox
+    } else if (i == 1) {
+        imgItem.onclick = showImgBox
+    } else if (i == 2) {
+        imgItem.onclick = showImgBox
+    } else {
+        imgItem.onclick = showImgBox
+    }
+})
+
 ///******************************************************************** app13  ****************************/
 var showSolutionBtn = document.querySelectorAll("#showSolutionBtn")
     , doneSolutionBtn = document.querySelectorAll("#doneSolutionBtn")
     , parentInner = document.querySelectorAll(".box-inner")
 
 
-showSolutionBtn.forEach(function (SSB ,i) {
+showSolutionBtn.forEach(function (SSB, i) {
     SSB.onclick = function () {
         parentInner[i].style.transform = "rotateX(180deg)"
     }
 })
 
-doneSolutionBtn.forEach(function (DSB , i) {
+doneSolutionBtn.forEach(function (DSB, i) {
     DSB.onclick = function () {
         parentInner[i].style.transform = "rotateX(360deg)"
     }
