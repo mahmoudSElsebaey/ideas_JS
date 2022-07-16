@@ -529,3 +529,18 @@ doneSolutionBtn.forEach(function (DSB, i) {
         parentInner[i].style.transform = "rotateX(360deg)"
     }
 })
+
+
+///******************************************************************** app14  ****************************/
+///******************************************************************** app15  ****************************/
+let textSelected = document.querySelector("#textSelected")
+    , showSelectedText = document.querySelector("#showSelectedText")
+
+
+function returnTextSelected() {
+    return window.getSelection().toString();
+}
+
+showSelectedText.onclick = function () {
+    textSelected.textContent = returnTextSelected()
+}
