@@ -48,7 +48,8 @@ imgIcon.forEach(function (imgIconItem, i) {
             showImages[8].style.visibility = "visible";
         }
     }
-    imgIconItem.onmouseenter = imgShow
+    // imgIconItem.onmouseenter = imgShow   //hover 
+    imgIconItem.onclick = imgShow   //Click 
 })
 
 // heartIconBtn  => effects
@@ -544,3 +545,24 @@ function returnTextSelected() {
 showSelectedText.onclick = function () {
     textSelected.textContent = returnTextSelected()
 }
+///******************************************************************** app16  ****************************/
+let mainSlide = document.querySelector(".main-slide")
+    , upArrowBtn = document.querySelector("#upArrow")
+    , downArrowBtn = document.querySelector("#downArrow")
+    , heightValue = 0
+upArrowBtn.onclick = function () {
+    if (heightValue > -780) {
+        heightValue -= 260
+        mainSlide.style.marginTop = heightValue + "px"
+        mainSlide.style.transition = ".8s"
+    }
+    //    else{heightValue = 260 }
+}
+downArrowBtn.onclick = function () {
+    if (heightValue < 0) {
+        heightValue += 260
+        mainSlide.style.marginTop = heightValue + "px"
+    }
+    // else { heightValue = -1040}
+}
+///******************************************************************** app17  ****************************/
