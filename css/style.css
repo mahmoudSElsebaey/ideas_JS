@@ -894,10 +894,54 @@ input[type=number] {
     position: relative;
     overflow: hidden;
     /* border: 1px solid red; */
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px 2px black;
+    display: flex;
+    justify-content: center;
 }
 
+.sec-14 iframe {
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.sec-14 .map-btns {
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translate(0, 10%);
+    margin-left: 30px;
+}
+
+.sec-14 .map-btns button {
+    width: 180px;
+    padding: 18px 0px;
+    margin: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: .3s;
+    transform: skewX(10deg);
+}
+
+.sec-14 .map-btns button:hover {
+    color: #fff;
+    background-color: black;
+    width: 220px;
+}
+
+/* 
+.sec-14 iframe.map-2 {
+    filter: invert();
+}
+
+.sec-14 iframe.map-3 {
+    filter: grayscale(100%);
+} */
 
 /***************************************************************** app15  ****************************/
 .sec-15 {
@@ -952,12 +996,13 @@ input[type=number] {
     /* position: relative; */
 }
 
-.sec-16 .main-slide{
+.sec-16 .main-slide {
     width: 90%;
     height: 100%;
     transition: .8s;
     /* position: relative; */
 }
+
 .sec-16 .slide-content {
     width: 100%;
     height: 100%;
@@ -967,14 +1012,14 @@ input[type=number] {
     overflow: hidden;
 }
 
-.sec-16 .slide-content::after{
+.sec-16 .slide-content::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 180px;
     height: 220px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     background-color: #f68b1e;
     z-index: -10;
@@ -989,19 +1034,21 @@ input[type=number] {
     height: 60px;
     border-radius: 50%;
 }
-.sec-16 .img-title .img-name{
+
+.sec-16 .img-title .img-name {
     padding-left: 15px;
     line-height: 1.5;
 }
+
 .sec-16 .img-name h3 {
     color: #f7035d;
 }
 
-.sec-16 .img-name p{
+.sec-16 .img-name p {
     color: #797775;
 }
 
-.sec-16 .slide-content .img-info{
+.sec-16 .slide-content .img-info {
     padding-top: 20px;
     color: #797775;
     line-height: 1.7;
@@ -1017,7 +1064,7 @@ input[type=number] {
     justify-content: space-between;
 }
 
-.sec-16 .buttons-slider p{
+.sec-16 .buttons-slider p {
     color: #fff;
     font-size: 35px;
     text-align: center;
@@ -1025,7 +1072,7 @@ input[type=number] {
     cursor: pointer;
 }
 
-.sec-16 .buttons-slider p i:hover{
+.sec-16 .buttons-slider p i:hover {
     color: #c0215b;
 }
 

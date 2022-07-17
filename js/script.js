@@ -105,10 +105,11 @@ btnBack.forEach(function (bB, i) {
         btnFront[i].onclick = function () {
             parentCart[i].style.transform = "rotateY(360deg)"
             cartIcon[i].innerHTML = '<i class="fas fa-cart-plus"></i>'
-            addToCart[i].style.backgroundColor = null
-            addToCart[i].style.color = null
-            addToCart[i].style.visibility = null
-            addToCart[i].style.border = null
+            // addToCart[i].style.backgroundColor = null
+            // addToCart[i].style.color = null
+            // addToCart[i].style.visibility = null
+            // addToCart[i].style.border = null
+            addToCart[i].style = null                    // ===> other way 
             btnFront[i].style.visibility = null
             heartBtn[i].style.color = null
             heartBtn[i].style.backgroundColor = null
@@ -530,9 +531,33 @@ doneSolutionBtn.forEach(function (DSB, i) {
         parentInner[i].style.transform = "rotateX(360deg)"
     }
 })
-
-
 ///******************************************************************** app14  ****************************/
+let mapBox = document.querySelector("#map")
+    , normalMapBtn = document.querySelector("#normalMap")
+    , darkMapBtn = document.querySelector("#darkMap")
+    , grayMapBtn = document.querySelector("#grayMap")
+
+function mapBtn(b1, b2, b3) {
+    b1.style.color = "#fff"
+    b1.style.backgroundColor = "#000"
+    b1.style.width = "220px"
+    b2.style = null
+    b3.style = null
+}
+
+normalMapBtn.onclick = () => {
+    mapBox.style.filter = null;
+    mapBtn(normalMapBtn, darkMapBtn, grayMapBtn);
+}
+darkMapBtn.onclick = () => {
+    mapBox.style.filter = " invert(100%)";
+    mapBtn(darkMapBtn, normalMapBtn, grayMapBtn)
+}
+grayMapBtn.onclick = () => {
+    mapBox.style.filter = " grayscale(100%)";
+    mapBtn(grayMapBtn, darkMapBtn, normalMapBtn)
+}
+
 ///******************************************************************** app15  ****************************/
 let textSelected = document.querySelector("#textSelected")
     , showSelectedText = document.querySelector("#showSelectedText")
