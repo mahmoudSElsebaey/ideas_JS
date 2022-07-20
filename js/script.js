@@ -276,6 +276,7 @@ textareaContent.onkeyup = function () {
 }
 
 ////***************************************************** App6 **********************************************/
+// show & hide pass by using btn text
 var passInp = document.querySelector("#passInp");
 var passBtn = document.querySelector("#passBtn");
 
@@ -288,7 +289,7 @@ passBtn.onclick = function () {
         this.textContent = "show password"
     }
 }
-
+// show & hide pass by using btn Icon
 var passInp2 = document.querySelector("#passInp2");
 var iconPassBtn = document.querySelector(".iconPassBtn");
 
@@ -448,12 +449,12 @@ btnError.onmousedown = function () {
     new Audio("Sounds/mixkit-click-error-1110.mp3").play()
 }
 btnError.onmouseup = function () { btnSoundCancelActive(this) }
-//////Alarm btn /////
-btnAlarm.onmousedown = function () {
-    btnSoundActive(this)
-    new Audio("Sounds/mixkit-classic-alarm-995.mp3").play()
-}
-btnAlarm.onmouseup = function () { btnSoundCancelActive(this) }
+// //////Alarm btn /////
+// btnAlarm.onmousedown = function () {
+//     btnSoundActive(this)
+//     new Audio("Sounds/mixkit-classic-alarm-995.mp3").play()
+// }
+// btnAlarm.onmouseup = function () { btnSoundCancelActive(this) }
 
 ///******************************************************************** app11  ****************************/
 let slideIndex = 1;
@@ -492,9 +493,7 @@ imgItemsBtn.forEach(function (imgItem, i) {
     imgContainerBox[0].style.visibility = "visible"     // active
     imgContainerBox[0].style.display = "block"          //active
     function closeImgBox() {
-        imgContainerBox[i].style.visibility = null
-        imgContainerBox[i].style.display = null
-        imgContainerBox[i].style.animation = null
+        imgContainerBox[i].style = null
     }
     function showImgBox() {
         imgContainerBox[i].style.animation = "animateToDown 1s"
@@ -503,15 +502,7 @@ imgItemsBtn.forEach(function (imgItem, i) {
         imgContainerBox[i].style.zIndex = zIndx++
         BtnCloseImgs[i].onclick = closeImgBox
     }
-    if (i == 0) {
-        imgItem.onclick = showImgBox
-    } else if (i == 1) {
-        imgItem.onclick = showImgBox
-    } else if (i == 2) {
-        imgItem.onclick = showImgBox
-    } else {
-        imgItem.onclick = showImgBox
-    }
+    imgItem.onclick = showImgBox
 })
 
 ///******************************************************************** app13  ****************************/
@@ -575,19 +566,178 @@ let mainSlide = document.querySelector(".main-slide")
     , upArrowBtn = document.querySelector("#upArrow")
     , downArrowBtn = document.querySelector("#downArrow")
     , heightValue = 0
-upArrowBtn.onclick = function () {
+
+
+function sliderUp() {
     if (heightValue > -780) {
         heightValue -= 260
         mainSlide.style.marginTop = heightValue + "px"
         mainSlide.style.transition = ".8s"
+        downArrowBtn.style.visibility = "visible"
+        if (heightValue == -780) {
+            upArrowBtn.style.visibility = "hidden"
+        }
     }
-    //    else{heightValue = 260 }
+    return heightValue;
 }
-downArrowBtn.onclick = function () {
+function sliderDown() {
     if (heightValue < 0) {
         heightValue += 260
         mainSlide.style.marginTop = heightValue + "px"
+        upArrowBtn.style.visibility = "visible"
+        if (heightValue == 0) {
+            downArrowBtn.style.visibility = "hidden"
+        }
     }
-    // else { heightValue = -1040}
+    return heightValue
+}
+upArrowBtn.onclick = sliderUp
+downArrowBtn.onclick = sliderDown
+
+// hide downArrowBtn in the end of slides
+if (sliderDown() == 0) {
+    downArrowBtn.style.visibility = "hidden"
 }
 ///******************************************************************** app17  ****************************/
+let resultCalc = document.querySelector(".result-calc")
+    , anyCalcBtn = document.querySelectorAll(".calc-table tr")
+// , calcNumBtn = document.querySelectorAll("#calcNum")
+// , calcEqualBtn = document.querySelector("#calcEqual")
+// , calcDivBtn = document.querySelector("#calcDiv")
+// , calcMulBtn = document.querySelector("#calcMul")
+// , calcSubBtn = document.querySelector("#calcSub")
+// , calcSumBtn = document.querySelector("#calcSum")
+// , calcDel = document.querySelector("#calcDel")
+// , showNum1 = document.querySelector(".showNum1")
+// , showNum2 = document.querySelector(".showNum2")
+// , showOprator = document.querySelector(".showOprator")
+
+
+// delete 
+// calcDel.onclick = () => {
+//     resultCalc.innerHTML = null
+// }
+
+anyCalcBtn.forEach(function (a) {
+    a.onclick = () => {
+        resultCalc.innerHTML = "بقوووووولك مش شغاله"
+        resultCalc.style.color = "darkgreen"
+    }
+})
+
+// calcNumBtn.forEach(function (numBtn) {
+//     function nn1() {
+//         resultCalc.innerHTML += numBtn.textContent
+//         let n1 = resultCalc.innerHTML
+//         return n1
+//     }
+//     numBtn.onclick = nn1
+//     calcDivBtn.onclick = () => {
+//         resultCalc.innerHTML = calcDivBtn.textContent;
+//         op = 0
+//         numBtn.onclick = nn2
+//     }
+//     calcMulBtn.onclick = () => { resultCalc.innerHTML = calcMulBtn.textContent; op = 1 }
+//     calcSubBtn.onclick = () => { resultCalc.innerHTML = calcSubBtn.textContent; op = 2 }
+//     calcSumBtn.onclick = () => { resultCalc.innerHTML = calcSumBtn.textContent; op = 3 }
+//     function nn2() {
+//         resultCalc.innerHTML += numBtn.textContent
+//         let n2 = resultCalc.innerHTML
+//         return n2
+//     }
+//     numBtn.onclick = nn2
+//     calcEqualBtn.onclick = function () {
+//         resultCalc.innerHTML = parseInt(nn2 ())
+//         resultCalc.style.color = "green"
+//     }
+// })
+
+/******************************************************************** app18  ****************************/
+let btnON = document.querySelector("#btnON")
+    , btnOFF = document.querySelector("#btnOFF")
+    , lightImg = document.querySelector("#lightImg")
+lightImg.style.transition = ".3s"
+btnON.onclick = () => {
+    lightImg.setAttribute("src", "images/lighton.png")
+    btnON.style.backgroundColor = "green"
+    btnOFF.style = null
+    new Audio("Sounds/mixkit-fast-double-click-on-mouse-275.mp3").play()
+}
+btnOFF.onclick = () => {
+    lightImg.setAttribute("src", "images/lightoff.png")
+    btnOFF.style.backgroundColor = "red"
+    btnON.style = null
+    new Audio("Sounds/mixkit-fast-double-click-on-mouse-275.mp3").play()
+}
+
+/******************************************************************** app19  ****************************/
+let productContainer = document.querySelector("#productContainer")
+    , bntPrev = document.querySelector("#bntPrev")
+    , bntNext = document.querySelector("#bntNext")
+    , marginLeftValue = 0
+// productContainer.style.width
+console.log(productContainer)
+
+function slideProductNext() {
+    if (marginLeftValue > -1220) {
+        marginLeftValue -= 305
+        productContainer.style.marginLeft = marginLeftValue + "px"
+        productContainer.style.transition = "1s"
+        bntPrev.style.visibility = "visible"
+        // hide Next button
+        if (marginLeftValue == -1220) {
+            bntNext.style.visibility = "hidden"
+        }
+    }
+}
+
+function slideProductPrevious() {
+    if (marginLeftValue < 0) {
+        marginLeftValue += 305
+        productContainer.style.marginLeft = marginLeftValue + "px"
+        productContainer.style.transition = "1s"
+        bntNext.style.visibility = "visible"
+        // hide pervious button
+        if (marginLeftValue == 0) {
+            bntPrev.style.visibility = "hidden"
+        }
+    }
+    return marginLeftValue
+}
+bntNext.onclick = slideProductNext
+bntPrev.onclick = slideProductPrevious
+// hide pervious button
+if (slideProductPrevious() == 0) {
+    bntPrev.style.visibility = "hidden"
+}
+
+// buy the product add to cart
+let buyProductBtn = document.querySelectorAll(".buy-product-btn")
+    , productBox = document.querySelectorAll("#productContainer .product-box")
+    , delProductBtn = document.querySelectorAll(".del-product")
+    , productsCounter = document.querySelector("#productsCounter")
+    , shopCount = 0
+
+buyProductBtn.forEach((productItem, i) => {
+    function addProductToCart() {
+        productItem.innerHTML = '<i class="fas fa-check"></i>'
+        productItem.style.visibility = "visible"
+        productItem.style.opacity = "1"
+        productItem.style.backgroundColor = "green"
+        productItem.style.color = "#fff"
+        productItem.style.border = "none"
+        productItem.style.transition = "background-color .8s"
+        delProductBtn[i].style.visibility = "visible"
+        productBox[i].style.boxShadow = "inset 1px 1px 10px 1px green"
+        productBox[i].style.border = "2px solid green"
+        productsCounter.innerHTML = ++shopCount
+    }
+    productItem.addEventListener("click", addProductToCart)              // buy product
+    delProductBtn[i].addEventListener("click", () => {                 // delete product
+        productItem.innerHTML = "Add To Cart"
+        productItem.style = null
+        delProductBtn[i].style = null
+        productBox[i].style = null
+        productsCounter.innerHTML = --shopCount
+    })
+})
